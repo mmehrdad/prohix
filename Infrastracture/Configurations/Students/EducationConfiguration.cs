@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Prohix.Infrastracture.Configurations.Students
 {
-    internal class EducationConfiguration : IEntityTypeConfiguration<Education>, IDbModelConfiguration
+    public class EducationConfiguration : IEntityTypeConfiguration<Education>, IDbModelConfiguration
     {
         public void Configure(EntityTypeBuilder<Education> builder)
         {

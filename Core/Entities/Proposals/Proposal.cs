@@ -15,5 +15,6 @@ namespace Prohix.Core.Entities.Proposals
         public virtual Student Student { get; set; }
         public Guid StudentId { get; set; }
         public ICollection<ProposalInSubject> ProposalInSubjects { get; set; }
+        public ICollection<ProposalStatus> ProposalStatuses { get; set; }
     }
 }
