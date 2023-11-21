@@ -1,0 +1,17 @@
+D:\samples\prohix\Application\bin\Debug\net7.0\Prohix.Application.deps.json
+D:\samples\prohix\Application\bin\Debug\net7.0\Prohix.Application.dll
+D:\samples\prohix\Application\bin\Debug\net7.0\Prohix.Application.pdb
+D:\samples\prohix\Application\bin\Debug\net7.0\Prohix.Core.dll
+D:\samples\prohix\Application\bin\Debug\net7.0\Prohix.Infrastracture.dll
+D:\samples\prohix\Application\bin\Debug\net7.0\Prohix.Infrastracture.pdb
+D:\samples\prohix\Application\bin\Debug\net7.0\Prohix.Core.pdb
+D:\samples\prohix\Application\obj\Debug\net7.0\Prohix.Application.csproj.AssemblyReference.cache
+D:\samples\prohix\Application\obj\Debug\net7.0\Prohix.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\samples\prohix\Application\obj\Debug\net7.0\Prohix.Application.AssemblyInfoInputs.cache
+D:\samples\prohix\Application\obj\Debug\net7.0\Prohix.Application.AssemblyInfo.cs
+D:\samples\prohix\Application\obj\Debug\net7.0\Prohix.Application.csproj.CoreCompileInputs.cache
+D:\samples\prohix\Application\obj\Debug\net7.0\Prohix.Application.csproj.CopyComplete
+D:\samples\prohix\Application\obj\Debug\net7.0\Prohix.Application.dll
+D:\samples\prohix\Application\obj\Debug\net7.0\refint\Prohix.Application.dll
+D:\samples\prohix\Application\obj\Debug\net7.0\Prohix.Application.pdb
+D:\samples\prohix\Application\obj\Debug\net7.0\ref\Prohix.Application.dll

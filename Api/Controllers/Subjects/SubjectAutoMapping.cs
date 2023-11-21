@@ -1,0 +1,16 @@
+using Prohix.Application.Utilities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Prohix.Api.Controllers.Subjects
+{
+    public class SubjectAutoMapping : DefaultProfile
+    {
+        public SubjectAutoMapping()
+        {
+        }
+    }
+}

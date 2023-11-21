@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Prohix.Core.Entities.Students
 {
-    public class Job:BaseEntity<int>
+    public class Job:BaseEntity<long>
     {
         public string JobTitle { get; set; }
         public string Employer { get; set; }
@@ -18,3 +18,5 @@ namespace Prohix.Core.Entities.Students
         public Guid StudentId { get; set; }
     }
 }
+
+

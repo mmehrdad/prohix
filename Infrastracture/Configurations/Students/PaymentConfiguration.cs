@@ -13,6 +13,11 @@ namespace Prohix.Infrastracture.Configurations.Students
     {
         public void Configure(EntityTypeBuilder<Payment> builder)
         {
+            builder.HasOne(q => q.Student)
+                .WithMany(q => q.Payments)
+                .HasForeignKey(q => q.StudentId)
+                .OnDelete(DeleteBehavior.NoAction);
+
             builder.ToTable("Payments");
         }
     }

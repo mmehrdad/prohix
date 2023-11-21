@@ -1,0 +1,20 @@
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore;
+using Prohix.Core.Entities.Commons;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Prohix.Infrastracture.Configurations.Commons
+{
+    public class FieldOfStudyConfiguration : IEntityTypeConfiguration<FieldOfStudy>, IDbModelConfiguration
+    {
+        public void Configure(EntityTypeBuilder<FieldOfStudy> builder)
+        {
+
+            builder.ToTable("FieldOfStudies");
+        }
+    }
+}

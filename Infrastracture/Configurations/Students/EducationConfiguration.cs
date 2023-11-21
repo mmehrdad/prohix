@@ -13,6 +13,28 @@ namespace Prohix.Infrastracture.Configurations.Students
     {
         public void Configure(EntityTypeBuilder<Education> builder)
         {
+            builder.HasOne(q => q.Student)
+                .WithMany(q => q.Educations)
+                .HasForeignKey(q => q.StudentId)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            builder.HasOne(q => q.University)
+                .WithMany(q => q.Educations)
+                .HasForeignKey(q => q.UniversityId)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            builder.HasOne(q => q.GradeOfStudy)
+                .WithMany(q => q.Educations)
+                .HasForeignKey(q => q.GradeOfStudyId)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            builder.HasOne(q => q.FieldOfStudy)
+                .WithMany(q => q.Educations)
+                .HasForeignKey(q => q.FieldOfStudyId)
+                .OnDelete(DeleteBehavior.NoAction);
+
+
+
             builder.ToTable("Educations");
         }
     }

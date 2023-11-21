@@ -7,8 +7,86 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Utilities\" />
-    <Folder Include="Services\" />
+    <Folder Include="Services\Commons\Countries\DeleteUseCase\" />
+    <Folder Include="Services\Commons\Countries\GetUseCase\" />
+    <Folder Include="Services\Commons\FieldOfStudies\AddUseCase\Models\" />
+    <Folder Include="Services\Commons\FieldOfStudies\DeleteUseCase\" />
+    <Folder Include="Services\Commons\FieldOfStudies\GetUseCase\" />
+    <Folder Include="Services\Commons\FieldOfStudies\UpdateUseCase\Models\" />
+    <Folder Include="Services\Commons\GradeOfStudies\AddUseCase\Models\" />
+    <Folder Include="Services\Commons\GradeOfStudies\DeleteUseCase\" />
+    <Folder Include="Services\Commons\GradeOfStudies\GetUseCase\" />
+    <Folder Include="Services\Commons\GradeOfStudies\UpdateUseCase\Models\" />
+    <Folder Include="Services\Commons\Languages\AddUseCase\Models\" />
+    <Folder Include="Services\Commons\Languages\DeleteUseCase\" />
+    <Folder Include="Services\Commons\Languages\GetUseCase\" />
+    <Folder Include="Services\Commons\Languages\UpdateUseCase\Models\" />
+    <Folder Include="Services\Commons\Universities\AddUseCase\Models\" />
+    <Folder Include="Services\Commons\Universities\DeleteUseCase\" />
+    <Folder Include="Services\Commons\Universities\GetUseCase\" />
+    <Folder Include="Services\Commons\Universities\UpdateUseCase\Models\" />
+    <Folder Include="Services\Proposals\ProposalInSubjects\UpdateUseCase\Models\" />
+    <Folder Include="Services\Proposals\ProposalStatuses\AddUseCase\Models\" />
+    <Folder Include="Services\Proposals\ProposalStatuses\UpdateUseCase\Models\" />
+    <Folder Include="Services\Proposals\Proposals\AddUseCase\Models\" />
+    <Folder Include="Services\Proposals\Proposals\UpdateUseCase\Models\" />
+    <Folder Include="Services\Students\Educations\AddUseCase\Models\" />
+    <Folder Include="Services\Students\Educations\UpdateUseCase\Models\" />
+    <Folder Include="Services\Students\Jobs\AddUseCase\Models\" />
+    <Folder Include="Services\Students\Jobs\UpdateUseCase\Models\" />
+    <Folder Include="Services\Students\Payments\AddUseCase\Models\" />
+    <Folder Include="Services\Students\Payments\UpdateUseCase\Models\" />
+    <Folder Include="Services\Students\StudentInlanguages\AddUseCase\Models\" />
+    <Folder Include="Services\Students\StudentInlanguages\UpdateUseCase\Models\" />
+    <Folder Include="Services\Students\Students\AddUseCase\Models\" />
+    <Folder Include="Services\Students\Students\UpdateUseCase\Models\" />
+    <Folder Include="Services\Subjects\Subjects\AddUseCase\Models\" />
+    <Folder Include="Services\Subjects\Subjects\DeleteUseCase\" />
+    <Folder Include="Services\Subjects\Subjects\GetUseCase\" />
+    <Folder Include="Services\Proposals\ProposalStatuses\DeleteUseCase\" />
+    <Folder Include="Services\Proposals\ProposalStatuses\GetUseCase\" />
+    <Folder Include="Services\Proposals\Proposals\DeleteUseCase\" />
+    <Folder Include="Services\Proposals\Proposals\GetUseCase\" />
+    <Folder Include="Services\Students\Educations\DeleteUseCase\" />
+    <Folder Include="Services\Students\Educations\GetUseCase\" />
+    <Folder Include="Services\Students\Jobs\DeleteUseCase\" />
+    <Folder Include="Services\Students\Jobs\GetUseCase\" />
+    <Folder Include="Services\Students\Payments\GetUseCase\" />
+    <Folder Include="Services\Students\Payments\DeleteUseCase\" />
+    <Folder Include="Services\Students\StudentInlanguages\DeleteUseCase\" />
+    <Folder Include="Services\Students\StudentInlanguages\GetUseCase\" />
+    <Folder Include="Services\Students\Students\DeleteUseCase\" />
+    <Folder Include="Services\Students\Students\GetUseCase\" />
+    <Folder Include="Services\Subjects\Subjects\UpdateUseCase\Models\" />
+    <Folder Include="Services\Teachers\TeacherInProposals\AddUseCase\Models\" />
+    <Folder Include="Services\Teachers\TeacherInProposals\DeleteUseCase\" />
+    <Folder Include="Services\Teachers\TeacherInProposals\GetUseCase\" />
+    <Folder Include="Services\Teachers\TeacherInProposals\UpdateUseCase\Models\" />
+    <Folder Include="Services\Teachers\TeacherInSubjects\AddUseCase\Models\" />
+    <Folder Include="Services\Teachers\TeacherInSubjects\DeleteUseCase\" />
+    <Folder Include="Services\Teachers\TeacherInSubjects\GetUseCase\" />
+    <Folder Include="Services\Teachers\TeacherInSubjects\UpdateUseCase\Models\" />
+    <Folder Include="Services\Teachers\TeacherInUniversities\AddUseCase\Models\" />
+    <Folder Include="Services\Teachers\TeacherInUniversities\DeleteUseCase\" />
+    <Folder Include="Services\Teachers\TeacherInUniversities\GetUseCase\" />
+    <Folder Include="Services\Teachers\TeacherInUniversities\UpdateUseCase\Models\" />
+    <Folder Include="Services\Teachers\Teachers\AddUseCase\Models\" />
+    <Folder Include="Services\Teachers\Teachers\DeleteUseCase\" />
+    <Folder Include="Services\Teachers\Teachers\GetUseCase\" />
+    <Folder Include="Services\Teachers\Teachers\UpdateUseCase\Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Mapster" Version="7.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.20" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Core" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastracture\Prohix.Infrastracture.csproj" />
   </ItemGroup>
 
 </Project>

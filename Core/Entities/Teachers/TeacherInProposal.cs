@@ -13,6 +13,6 @@ namespace Prohix.Core.Entities.Teachers
         public Proposal Proposal { get; set; }
         public long ProposalId { get; set; }
         public Teacher Teacher { get; set; }
-        public long TeacherId { get; set; }
+        public Guid TeacherId { get; set; }
     }
 }

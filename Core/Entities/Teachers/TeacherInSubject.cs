@@ -14,6 +14,6 @@ namespace Prohix.Core.Entities.Teachers
         public Subject Subject { get; set; }
         public long SubjectId { get; set; }
         public virtual Teacher Teacher { get; set; }
-        public long TeacherId { get; set; }
+        public Guid TeacherId { get; set; }
     }
 }

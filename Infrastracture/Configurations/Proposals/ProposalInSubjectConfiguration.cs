@@ -13,6 +13,15 @@ namespace Prohix.Infrastracture.Configurations.Proposals
     {
         public void Configure(EntityTypeBuilder<ProposalInSubject> builder)
         {
+            builder.HasOne(q => q.Proposal)
+                .WithMany(q => q.ProposalInSubjects)
+                .HasForeignKey(q => q.ProposalId)
+                 .OnDelete(DeleteBehavior.NoAction);
+
+            builder.HasOne(q => q.Subject)
+                .WithMany(q => q.ProposalInSubjects)
+                .HasForeignKey(q => q.SubjectId)
+                 .OnDelete(DeleteBehavior.NoAction);
             builder.ToTable("ProposalInSubjects");
         }
     }

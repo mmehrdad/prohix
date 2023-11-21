@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Prohix.Core.Entities.Students;
+using Prohix.Core.Entities.Teachers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +10,12 @@ namespace Prohix.Core.Entities.Commons
 {
     public class University
     {
-        public long ID { get; set; }
+        public long Id { get; set; }
         public string Name { get; set; }
-        public virtual ICollection<University> Universities { get; set; }
+        public Country Country { get; set; }
+        public long CountryId { get; set; }
+        public bool IsValid { get; set; }
+        public virtual ICollection<TeacherInUniversity> TeacherInUniversities { get; set; }
+        public virtual ICollection<Education> Educations { get; set; }
     }
 }

@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\prohix\\Core\\Prohix.Core.csproj": {}
+    "C:\\Users\\BackEnd\\source\\repos\\prohix\\Core\\Prohix.Core.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\prohix\\Core\\Prohix.Core.csproj": {
+    "C:\\Users\\BackEnd\\source\\repos\\prohix\\Core\\Prohix.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\prohix\\Core\\Prohix.Core.csproj",
+        "projectUniqueName": "C:\\Users\\BackEnd\\source\\repos\\prohix\\Core\\Prohix.Core.csproj",
         "projectName": "Prohix.Core",
-        "projectPath": "D:\\Projects\\prohix\\Core\\Prohix.Core.csproj",
-        "packagesPath": "C:\\Users\\NP\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\prohix\\Core\\obj\\",
+        "projectPath": "C:\\Users\\BackEnd\\source\\repos\\prohix\\Core\\Prohix.Core.csproj",
+        "packagesPath": "C:\\Users\\BackEnd\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\BackEnd\\source\\repos\\prohix\\Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\NP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\BackEnd\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.18, )"
+            },
             "Microsoft.Extensions.Identity.Stores": {
               "target": "Package",
               "version": "[7.0.7, )"
@@ -63,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

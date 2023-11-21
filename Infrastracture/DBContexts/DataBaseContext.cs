@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Prohix.Infrastracture.DBContexts
 {
-    public class DataBaseContext : IdentityDbContext<Student, Role, int>// IdentityDbContext<User>
+    public class DataBaseContext : IdentityDbContext<User, Role, Guid, UserClaim, UserRole, UserLogin, RoleClaim, UserToken>// IdentityDbContext<User>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {

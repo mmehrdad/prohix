@@ -5,11 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Samak.Domain.Entities.Identity
+namespace Prohix.Core.Entities.Identity
 {
-    public class UserLogin /*: IdentityUserLogin<int>*/
+    public class UserLogin : IdentityUserLogin<Guid>
     {
-        public int Id { get; set; }
-       // public User User { get; set; }
+        public User User { get; set; }
     }
 }

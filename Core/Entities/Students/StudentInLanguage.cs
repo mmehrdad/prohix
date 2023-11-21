@@ -1,5 +1,5 @@
-﻿using Prohix.Core.Entities.Commons;
-using Studex.Domain.Entities.Commons;
+﻿using Prohix.Core.Constants.Commons;
+using Prohix.Core.Entities.Commons;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,14 +8,13 @@ using System.Threading.Tasks;
 
 namespace Prohix.Core.Entities.Students
 {
-    public class StudentInLanguage
+    public class StudentInLanguage : BaseEntity<long>
     {
-        public long ID { get; set; }
         public virtual Student Student { get; set; }
-        public Guid StID { get; set; }
+        public Guid StudentId { get; set; }
         public  Fluency Fluency { get; set; }
-        public long FluancyID { get; set; }
+        public long FluancyId { get; set; }
         public virtual Language Language { get; set; }
-        public long LanguageID { get; set; }
+        public long LanguageId { get; set; }
     }
 }

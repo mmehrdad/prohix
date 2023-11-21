@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Prohix.Core.Entities.Students;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,8 @@ namespace Prohix.Core.Entities.Commons
 {
     public class FieldOfStudy
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string Name { get; set; }
+        public virtual ICollection<Education> Educations { get; set; }
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Prohix.Core.Entities.Commons
+namespace Prohix.Core.Constants.Commons
 {
-    public enum Fluency:byte
+    public enum Fluency : byte
     {
         Begginer = 1,
 
@@ -14,6 +14,6 @@ namespace Prohix.Core.Entities.Commons
 
         Advance = 3,
 
-        MotherTongue=4,
+        MotherTongue = 4,
     }
 }

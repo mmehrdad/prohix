@@ -13,6 +13,6 @@ namespace Prohix.Core.Entities.Teachers
         public University University { get; set; }
         public long UniversityId { get; set; }
         public virtual Teacher Teacher { get; set; }
-        public long TeacherId { get; set; }
+        public Guid TeacherId { get; set; }
     }
 }

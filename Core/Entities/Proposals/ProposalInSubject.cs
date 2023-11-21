@@ -9,10 +9,10 @@ namespace Prohix.Core.Entities.Proposals
 {
     public class ProposalInSubject
     {
-        public long ID { get; set; }
+        public long Id { get; set; }
         public Subject Subject { get; set; }
         public long SubjectId { get; set; }
         public  Proposal Proposal { get; set; }
-        public long ProposalID { get; set; }
+        public long ProposalId { get; set; }
     }
 }
