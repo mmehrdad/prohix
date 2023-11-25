@@ -57,14 +57,14 @@ namespace Prohix.Application.Services.Students.Account.Register
         public async Task<StudentRegisterOutputModel> RegisterStudent(StudentRegisterInputModel inputModel)
         {
 
-            var newStudent = new Student();
-            
+           // var newStudent = new Student();
 
+            inputModel.CreatedTime = DateTime.Now;
             var newUser = _mapper.Map<User>(inputModel);
-            newUser.UserName = inputModel.Email;
-            newUser.CreatedTime = DateTime.Now;
+           // newUser.UserName = inputModel.Email;
+           // newUser.CreatedTime = DateTime.Now;
 
-            newUser.Student= newStudent;
+            newUser.Student= new ();
             var errorMessage = "";
 
             var result = await _userManager.CreateAsync(newUser, inputModel.Password);
@@ -107,7 +107,7 @@ namespace Prohix.Application.Services.Students.Account.Register
                 {
                     HasError = false,
                     Message="Student successfully registered",
-                    OutputModelFields = _mapper.Map<StudentRegisterOutputModelFields>(newStudent)
+                    OutputModelFields = _mapper.Map<StudentRegisterOutputModelFields>(newUser.Student)
                 };
             }
             switch (result.Errors.FirstOrDefault().Code)

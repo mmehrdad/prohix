@@ -21,6 +21,8 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using Prohix.Core.Entities.Identity;
 using Prohix.Application.Services.Teachers.Account.Login.Models;
+using Prohix.Infrastracture.RepositoryInterfaces.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Prohix.Application.Services.Students.Account.Login
 {
@@ -29,6 +31,7 @@ namespace Prohix.Application.Services.Students.Account.Login
         private readonly IUserInformationProvider userInformationProvider;
         private readonly IMapper _mapper;
         private readonly IStudentRepository _studentRepository;
+        private readonly IUserRepository _userRepository;
         private readonly UserManager<User> _userManager;
        // private readonly SignInManager<User> _signInManager;
         private readonly IEmailService _emailService;
@@ -38,17 +41,17 @@ namespace Prohix.Application.Services.Students.Account.Login
 
             IUserInformationProvider userInformationProvider,
             IStudentRepository studentRepository,
+            IUserRepository userRepository,
             UserManager<User> userManager,
-           // SignInManager<User> signInManager,
             IEmailService emailService,
             IHttpContextAccessor httpContextAccessor,
             IMapper mapper)
         {
             this.userInformationProvider = userInformationProvider;
             _studentRepository = studentRepository;
+            _userRepository = userRepository;
             _mapper = mapper;
             _userManager = userManager;
-          //  _signInManager = signInManager;
             _emailService = emailService;
             _httpContextAccessor = httpContextAccessor;
         }
@@ -56,6 +59,7 @@ namespace Prohix.Application.Services.Students.Account.Login
         public async Task<StudentLoginOutputModel> LoginStudent(StudentLoginInputModel inputModel)
         {
             var user = _userManager.FindByEmailAsync(inputModel.Username).Result;
+            
             if (user == null)
             {
                 return new StudentLoginOutputModel { HasError = true, Message = "User not found !!!" };
@@ -96,8 +100,8 @@ namespace Prohix.Application.Services.Students.Account.Login
                 return new StudentLoginOutputModel { HasError = true, Message = "User not access to this section !!!" };
             }
 
-            
-
+            // user.Include(p=>p.)
+           var stu= _userRepository.GetAllAsNoTracking().Where(p => p.Id == user.Id).Include(p => p.Student).FirstOrDefaultAsync().Result;
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(AppConfig.GetSection("JwtSettings", "Secret"));
 
@@ -107,7 +111,7 @@ namespace Prohix.Application.Services.Students.Account.Login
 
             var claims = new List<Claim>();
             claims.Add(new Claim("UserId", user.Id.ToString()));
-            //claims.Add(new Claim("Name", user.Student.FirstName+" "+user.Student.SureName));
+            claims.Add(new Claim("Name", stu.Student.FirstName+" "+stu.Student.Surname));
             claims.Add(new Claim("UserName", user.UserName));
             claims.Add(new Claim("Role", "Student"));
             claims.Add(new Claim("StudentId", user.StudentId.ToString()));
